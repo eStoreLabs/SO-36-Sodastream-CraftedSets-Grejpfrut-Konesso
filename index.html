@@ -1,373 +1,388 @@
 <!DOCTYPE html>
 <html lang="pl">
 
-  <head>
+    <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
   <title>Crafted Sets</title>
-  <style>#es-rc-content.es-rc .es-kv__subtitle,#es-rc-content.es-rc .es-kv__title,#es-rc-content.es-rc .es-kv__title--small,#es-rc-content.es-rc .es-title{font-family:Gazpacho-Bold,sans-serif;font-weight:700;text-align:center}@font-face{font-family:HurmeGeometricSans3-Bold;src:local('HurmeGeometricSans3-Bold'),url('./fonts/HurmeGeometricSans3-Bold.woff2') format('truetype')}@font-face{font-family:HurmeGeometricSans3-Regular;src:local('HurmeGeometricSans3-Regular'),url('./fonts/HurmeGeometricSans3-Regular.woff2') format('truetype')}@font-face{font-family:HurmeGeometricSans3-Black;src:local('HurmeGeometricSans3-Black'),url('./fonts/HurmeGeometricSans3-Black.woff2') format('truetype')}@font-face{font-family:HurmeGeometricSans3-Light;src:local('HurmeGeometricSans3-Light'),url('./fonts/HurmeGeometricSans3-Light.woff2') format('truetype')}@font-face{font-family:Gazpacho-Bold;src:local('Gazpacho-Bold'),url('./fonts/Gazpacho-Bold.woff2') format('truetype')}@font-face{font-family:Gazpacho-Regular;src:local('Gazpacho-Regular'),url('./fonts/Gazpacho-Regular.woff2') format('truetype')}#es-rc-content.es-rc{font-family:HurmeGeometricSans3-Regular,sans-serif;font-size:16px;font-weight:300;line-height:1.2;max-width:1110px;margin:0 auto;padding:0;overflow:hidden;color:#000;background:#e8e2d4}#es-rc-content.es-rc p{line-height:inherit}#es-rc-content.es-rc .es-title{margin:32px 0;padding:0;line-height:inherit;color:inherit;font-size:36px}#es-rc-content.es-rc body,#es-rc-content.es-rc html{margin:0;padding:0}#es-rc-content.es-rc *{box-sizing:border-box}#es-rc-content.es-rc h2,#es-rc-content.es-rc p{margin:0}#es-rc-content.es-rc .es-kv{margin:0;padding:0 5px;position:relative}#es-rc-content.es-rc .es-kv__logo{position:relative;padding:30px 15px;max-width:90%;margin:0 auto}#es-rc-content.es-rc .es-kv__title{position:relative;margin:0;padding:5px 0 15px;font-size:35px;line-height:1}#es-rc-content.es-rc .es-kv__title--small{font-size:14px}#es-rc-content.es-rc .es-kv__subtitle{font-size:18px;padding-bottom:15px}#es-rc-content.es-rc .es-kv__packshot,#es-rc-content.es-rc .es-triple,#es-rc-content.es-rc .es-triple__mobile-container{position:relative}#es-rc-content.es-rc .es-kv__glass{display:none;position:absolute}#es-rc-content.es-rc .es-kv__packshot--photo{max-width:100%;display:block;margin:0 auto;position:relative;z-index:1}#es-rc-content.es-rc .es-kv__img{max-width:60%;display:block;margin:0 auto}#es-rc-content.es-rc .es-kv__text{font-family:HurmeGeometricSans3-Regular,sans-serif;font-weight:400;margin:0 auto 30px;text-align:center;padding:0 10px;font-size:16px}#es-rc-content.es-rc .es-set{background-color:#e8e3d1}#es-rc-content.es-rc .es-set__title{max-width:90%;margin:0 auto 20px;font-family:HurmeGeometricSans3-Bold,sans-serif;font-size:20px;font-weight:700;text-align:center}#es-rc-content.es-rc .es-set__title--gazpacho{font-family:Gazpacho-Bold,sans-serif;font-weight:700;font-size:26px}#es-rc-content.es-rc .es-set__subtitle{margin:0 auto 50px;max-width:90%;text-align:center;font-size:16px}#es-rc-content.es-rc .es-set__group{padding:30px 15px;background-color:#000;color:#eae6d6}#es-rc-content.es-rc .es-set__group-item-title{font-family:Gazpacho-Bold,sans-serif;font-weight:700;margin-bottom:10px;font-size:16px}#es-rc-content.es-rc .es-set__group-item-description{font-family:Gazpacho-Bold,sans-serif;font-weight:700;font-size:14px;margin-bottom:20px}#es-rc-content.es-rc .es-recipes__img,#es-rc-content.es-rc .es-set__group-img{margin:0 auto;display:block;max-width:100%}#es-rc-content.es-rc .es-set__group-img--mobile{max-width:50%}#es-rc-content.es-rc .es-set__group-img--desktop,#es-rc-content.es-rc .es-triple__desktop-container{display:none}#es-rc-content.es-rc .es-revolution{margin-top:-100px;padding-top:100px;background:url(./img/revolution-bg.png) center -100px no-repeat}#es-rc-content.es-rc .es-revolution__title{font-size:26px}#es-rc-content.es-rc .es-revolution__subtitle{font-family:HurmeGeometricSans3-Regular,sans-serif;font-weight:400;padding-left:10px;padding-right:10px;text-align:center}#es-rc-content.es-rc .es-revolution__packshot{margin:0 auto;display:block;max-width:50%;padding-top:30px}#es-rc-content.es-rc .es-revolution__container{background-color:#ded1bb}#es-rc-content.es-rc .es-revolution__right{padding-top:20px;margin-top:-20px;padding-left:15px;padding-right:15px}#es-rc-content.es-rc .es-revolution__right-description{font-family:HurmeGeometricSans3-Regular,sans-serif;font-weight:400;font-size:16px;padding-bottom:30px;padding-top:30px}#es-rc-content.es-rc .es-info__text b,#es-rc-content.es-rc .es-revolution__right-description--bold{font-family:HurmeGeometricSans3-Bold,sans-serif;font-weight:700}#es-rc-content.es-rc .es-info{margin:0;padding:0 0 100px;background-color:#eae6d6}#es-rc-content.es-rc .es-info__title{position:relative;margin:0 auto;padding:25px;color:#000;text-align:center;font-size:26px}#es-rc-content.es-rc .es-info__title--large{display:block;text-align:right;font-size:32px}#es-rc-content.es-rc .es-info__text{width:90%;margin:0 auto;padding:0;font-family:HurmeGeometricSans3-Regular,sans-serif;font-weight:500;color:#000}#es-rc-content.es-rc .es-possibilities{margin:30px 0 0;padding-top:75px}#es-rc-content.es-rc .es-possibilities__content{padding:30px 15px}#es-rc-content.es-rc .es-possibilities__description--centered{text-align:center}#es-rc-content.es-rc .es-possibilities__description-title{padding-top:30px;font-family:Gazpacho-Bold,sans-serif;font-weight:500;text-align:center;font-size:16px}#es-rc-content.es-rc .es-possibilities__description-bold{font-family:HurmeGeometricSans3-Bold,sans-serif;font-weight:700;text-align:center}#es-rc-content.es-rc .es-possibilities__description-bold--first{display:block;font-size:23px;margin-bottom:10px}#es-rc-content.es-rc .es-possibilities__title{position:relative;margin:0;padding:30px 0 0;font-family:Gazpacho-Bold,sans-serif;font-size:20px;font-weight:700}#es-rc-content.es-rc .es-possibilities__title--first{margin-top:-30px;padding-left:20px}#es-rc-content.es-rc .es-possibilities__title--second{position:absolute;top:44%;left:-10px;color:#e8e2d4}#es-rc-content.es-rc .es-possibilities__title-container{top:-75px;position:relative}#es-rc-content.es-rc .es-possibilities__title-group{position:relative;max-width:72%;min-width:50%}#es-rc-content.es-rc .es-possibilities__subtitle{margin:0;padding:20px 10px 0 0;font-size:20px;font-family:Gazpacho-Bold,sans-serif;font-weight:700;text-align:right}#es-rc-content.es-rc .es-possibilities__img{max-width:100%;display:block;margin:-103px auto 0}#es-rc-content.es-rc .es-possibilities__text{padding-top:20px;font-family:HurmeGeometricSans3-Regular,sans-serif;font-weight:400}#es-rc-content.es-rc .es-possibilities__packshot{margin:0 auto;display:block;max-width:50%}#es-rc-content.es-rc .es-photo__img{display:block;margin:0 auto 0 -1%;padding:15px 0 30px;max-width:60%}#es-rc-content.es-rc .es-photo__img--syrups{margin:0 auto;max-width:90%}#es-rc-content.es-rc .es-triple__pepper{position:absolute;top:1%;left:3%;margin:0 auto;display:block;max-width:20%}#es-rc-content.es-rc .es-triple__title{position:relative;margin:0;padding:15px 15px 0;font-family:HurmeGeometricSans3-Bold,sans-serif;text-align:center;text-transform:uppercase;font-size:36px;font-weight:700}#es-rc-content.es-rc .es-triple__text{margin:0 auto;padding:0 15px 30px;line-height:inherit;color:inherit;font-weight:inherit;width:80%;font-size:20px;font-family:HurmeGeometricSans3-Light,sans-serif;text-align:center}#es-rc-content.es-rc .es-triple__wrapper{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-around}#es-rc-content.es-rc .es-triple__single{height:100%;position:relative}#es-rc-content.es-rc .es-triple__desc{margin:0;padding:20px 0 0;position:absolute;top:25px;left:0;font-family:HurmeGeometricSans3-Bold,sans-serif;font-weight:700;color:#fff;font-size:35px;text-align:center}#es-rc-content.es-rc .es-triple__desc--small{position:absolute;top:97%;left:10%;font-size:10px;width:120%;text-align:right;text-shadow:1px 1px 2px rgba(0,0,0,.25)}#es-rc-content.es-rc .es-triple__desc--first{top:20%;left:24%}#es-rc-content.es-rc .es-triple__desc--second{top:32%;left:41%}#es-rc-content.es-rc .es-triple__desc--third{top:21%;left:16%}#es-rc-content.es-rc .es-triple__desc-mobile--first,#es-rc-content.es-rc .es-triple__desc-mobile--second,#es-rc-content.es-rc .es-triple__desc-mobile--third{position:absolute;font-family:HurmeGeometricSans3-Black,sans-serif;font-weight:800;color:#fff;font-size:45px;text-align:center}#es-rc-content.es-rc .es-triple__desc-mobile--first{top:7%;left:10%}#es-rc-content.es-rc .es-triple__desc-mobile--second{top:39%;left:37%}#es-rc-content.es-rc .es-triple__desc-mobile--third{top:57%;left:2%}#es-rc-content.es-rc .es-triple__img{max-width:100%;display:block;margin:0 auto;min-width:250px}#es-rc-content.es-rc .es-recipes__day-night-title{max-width:350px;margin-bottom:20px;padding-left:10px;padding-right:10px;font-family:Gazpacho-Bold,sans-serif;font-weight:500;font-size:24px}#es-rc-content.es-rc .es-recipes__day-night-description{padding-left:10px;padding-right:10px;margin-bottom:30px;font-family:HurmeGeometricSans3-Regular,sans-serif;font-weight:400;font-size:16px}#es-rc-content.es-rc .es-recipes__day-night{position:relative;margin-bottom:50px}#es-rc-content.es-rc .es-recipes__day-night--second{margin-bottom:50px}#es-rc-content.es-rc .es-recipes__day-night-text{font-family:HurmeGeometricSans3-Bold,sans-serif;font-weight:500;font-size:16px}#es-rc-content.es-rc .es-recipes__day-night-label{position:absolute;margin-top:30px;padding-left:10px;padding-right:10px;font-family:Gazpacho-Bold,sans-serif;font-weight:700;font-size:60px}#es-rc-content.es-rc .es-recipes__day-night-label--first{color:#fff;top:6%;left:40%}#es-rc-content.es-rc .es-recipes__day-night-label--second{color:#000;top:-6%;left:0}#es-rc-content.es-rc .es-recipes__img--night-desktop{display:none}#es-rc-content.es-rc .es-recipes__day-night-recipe-content-title{margin-bottom:20px;font-family:Gazpacho-Bold,sans-serif;font-weight:700;font-size:26px}#es-rc-content.es-rc .es-recipes__day-night-recipe-content-title--small{margin-bottom:20px;font-family:Gazpacho-Bold,sans-serif;font-weight:700;font-size:16px}#es-rc-content.es-rc .es-recipes__day-night-recipe-content{padding-left:10px;padding-right:10px;z-index:1;font-size:13px}#es-rc-content.es-rc .es-recipes__day-night-recipe-content--dark{background-color:#000;padding-top:30%;padding-bottom:135px;margin-top:-38%;color:#fff;clip-path:polygon(0 0%,100% 32%,100% 67%,0 100%)}#es-rc-content.es-rc .es-recipes__day-night-recipe-content-ingredients-list{padding-left:20px;max-width:90%}#es-rc-content.es-rc .es-recipes__day-night-recipe-content-ingredients-list li{margin-bottom:10px}#es-rc-content.es-rc .es-video{margin:0 auto 34px;width:95%;position:relative}#es-rc-content.es-rc .es-video__title{margin:0 0 30px;padding:0;font-size:26px;text-align:center}#es-rc-content.es-rc .es-video__subtitle{margin:0 0 20px;padding:0;font-family:Gazpacho-Bold,sans-serif;font-weight:500;text-align:center;font-size:18px}#es-rc-content.es-rc .es-video__subtitle-second{font-family:Gazpacho-Bold,sans-serif;font-weight:700;font-size:23px}#es-rc-content.es-rc .es-video__text{font-family:HurmeGeometricSans3-Regular,sans-serif;font-weight:400;text-align:center;max-width:100%;margin-bottom:20px}#es-rc-content.es-rc .es-video__container{margin:0 auto;width:100%;position:relative;padding-bottom:46.25%;height:0}#es-rc-content.es-rc .es-video__iframe{border:0;position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;max-height:540px}#es-rc-content.es-rc .es-video__img{display:block;margin:0 auto;max-width:200px}#es-rc-content.es-rc .es-photo__text{font-size:23px}@media screen and (min-width:500px){#es-rc-content.es-rc .es-recipes__day-night-recipe-content{font-size:16px}#es-rc-content.es-rc .es-recipes__day-night{margin-bottom:100px}#es-rc-content.es-rc .es-recipes__day-night-group{max-width:395px;margin:0 auto 0 10%}#es-rc-content.es-rc .es-recipes__day-night-label--first{top:8%;left:44%}#es-rc-content.es-rc .es-recipes__day-night-label--second{top:-4%;left:0}#es-rc-content.es-rc .es-set__group-img--mobile{max-width:40%}#es-rc-content.es-rc .es-triple__wrapper{flex-wrap:nowrap}#es-rc-content.es-rc .es-triple__desc-mobile--first,#es-rc-content.es-rc .es-triple__desc-mobile--second,#es-rc-content.es-rc .es-triple__desc-mobile--third{font-size:70px}#es-rc-content.es-rc .es-triple__desc-mobile--first{top:12%;left:23%}#es-rc-content.es-rc .es-triple__desc-mobile--second{top:41%;left:37%}#es-rc-content.es-rc .es-triple__desc-mobile--third{top:61%;left:16%}#es-rc-content.es-rc .es-triple__desc--small{max-width:300px;font-size:14px;top:110%;left:-12%;text-shadow:none}#es-rc-content.es-rc .es-video{margin-top:-50px}#es-rc-content.es-rc .es-video__img{max-width:300px}#es-rc-content.es-rc .es-video__text{max-width:80%;margin:0 auto 30px}}@media screen and (min-width:600px){#es-rc-content.es-rc .es-title{font-size:46px}#es-rc-content.es-rc .es-photo__text,#es-rc-content.es-rc .es-video__subtitle-second{font-size:36px}#es-rc-content.es-rc .es-photo__img{max-width:80%}#es-rc-content.es-rc .es-set{position:relative}#es-rc-content.es-rc .es-set__group{display:flex;align-items:center;justify-content:space-between;gap:10px;background:url('./img/set-packshot.png') center center/cover no-repeat;min-height:500px}#es-rc-content.es-rc .es-set__group-item{max-width:32%}#es-rc-content.es-rc .es-set__group-item--left{margin-top:5%;position:relative}#es-rc-content.es-rc .es-set__group-item--left::after{content:'';display:block;position:absolute;top:-65%;left:37%;background:url('./img/arrow.png') center center/contain no-repeat;width:191px;max-width:64%;height:100%}#es-rc-content.es-rc .es-set__group-item--right{margin-top:-25%;margin-right:-3%;position:relative}#es-rc-content.es-rc .es-set__group-item--right::after{content:'';display:block;position:absolute;top:68%;left:-8%;background:url(./img/arrow.png) center center/contain no-repeat;width:191px;max-width:64%;height:100%;transform:rotateY(180deg) scaleY(-1) rotate(-10deg)}#es-rc-content.es-rc .es-set__group-img--mobile{display:none}#es-rc-content.es-rc .es-recipes{display:flex;margin-top:50px}#es-rc-content.es-rc .es-recipes__day-night{max-width:50%}#es-rc-content.es-rc .es-recipes__day-night-label--second{top:-6%;left:0}#es-rc-content.es-rc .es-recipes__day-night-recipe-content--dark{top:47%}#es-rc-content.es-rc .es-recipes__day-night-recipe-content{padding-left:10px;padding-right:10px;z-index:1;font-size:13px}#es-rc-content.es-rc .es-recipes__day-night-label--first{top:11%}#es-rc-content.es-rc .es-possibilities{margin:30px 0 0}#es-rc-content.es-rc .es-possibilities__title-group{max-width:60%}#es-rc-content.es-rc .es-possibilities__left,#es-rc-content.es-rc .es-possibilities__right{min-width:50%}#es-rc-content.es-rc .es-possibilities__right{min-width:60%;max-width:500px;margin-left:auto;text-align:right}#es-rc-content.es-rc .es-possibilities__content{padding:30px}#es-rc-content.es-rc .es-possibilities__title{font-size:25px}#es-rc-content.es-rc .es-possibilities__title--first,#es-rc-content.es-rc .es-possibilities__title--second{font-size:35px}#es-rc-content.es-rc .es-possibilities__title--second{left:0}#es-rc-content.es-rc .es-triple{margin-top:-50px}#es-rc-content.es-rc .es-info__container{display:flex;align-items:center;justify-content:center}#es-rc-content.es-rc .es-info__left{width:40%}#es-rc-content.es-rc .es-info__right{width:60%}#es-rc-content.es-rc .es-revolution{margin-top:-150px;padding-top:150px}#es-rc-content.es-rc .es-revolution__subtitle{margin:0 auto;max-width:84%}#es-rc-content.es-rc .es-revolution__container{display:flex;justify-content:space-between;gap:20px;padding-bottom:30px}#es-rc-content.es-rc .es-revolution__left,#es-rc-content.es-rc .es-revolution__right{width:50%}}@media screen and (min-width:700px){#es-rc-content.es-rc .es-triple__desc-mobile--first,#es-rc-content.es-rc .es-triple__desc-mobile--second,#es-rc-content.es-rc .es-triple__desc-mobile--third{font-size:90px}#es-rc-content.es-rc .es-triple__desc-mobile--first{top:12%;left:26%}#es-rc-content.es-rc .es-triple__desc-mobile--second{top:43%;left:40%}#es-rc-content.es-rc .es-triple__desc-mobile--third{top:63%;left:18%}}@media screen and (min-width:768px){#es-rc-content.es-rc .es-kv{background:url('./img/kv-bg.png') center center/cover no-repeat;min-height:900px;padding-bottom:300px;position:relative}#es-rc-content.es-rc .es-kv__glass{display:block;top:40%;left:15%}#es-rc-content.es-rc .es-kv__img,#es-rc-content.es-rc .es-kv__logo{margin:0}#es-rc-content.es-rc .es-kv__packshot{display:none;position:absolute;right:0;top:30px;width:350px}#es-rc-content.es-rc .es-kv__title{font-size:35px}#es-rc-content.es-rc .es-kv__title--left{display:block;text-align:left;max-width:70%}#es-rc-content.es-rc .es-kv__title--small{text-align:left}#es-rc-content.es-rc .es-kv__packshot--photo{max-width:100%;display:block;margin:0 auto;padding:0;position:relative;z-index:1}#es-rc-content.es-rc .es-kv__title-group{position:absolute;max-width:455px;left:10%;top:13%;margin:0 auto;text-align:center}#es-rc-content.es-rc .es-kv__text{padding-top:30px;padding-bottom:30px;margin:0 auto;width:90%;text-align:center;font-size:17px}#es-rc-content.es-rc .es-info__titleBig,#es-rc-content.es-rc .es-triple__title{font-size:50px}#es-rc-content.es-rc .es-info__title--large{font-size:42px;margin-right:50px}#es-rc-content.es-rc .es-recipes__day-night-title{font-size:20px}#es-rc-content.es-rc .es-recipes__day-night--first{margin-top:0}#es-rc-content.es-rc .es-recipes__day-night--second{padding-top:0;margin-top:-32px}#es-rc-content.es-rc .es-recipes__day-night-recipe-content-title{margin-bottom:20px;font-family:Gazpacho-Bold,sans-serif;font-weight:700;font-size:35px}#es-rc-content.es-rc .es-recipes__day-night-recipe-content-title--small{font-size:26px}#es-rc-content.es-rc .es-recipes__day-night-label{font-size:80px}#es-rc-content.es-rc .es-recipes__day-night-label--first{top:10%}#es-rc-content.es-rc .es-recipes__day-night-label--second{top:-8%;left:0}#es-rc-content.es-rc .es-recipes__day-night-recipe-content{font-size:18px}#es-rc-content.es-rc .es-set::after{height:500px}#es-rc-content.es-rc .es-set__group{min-height:600px}}@media screen and (min-width:825px){#es-rc-content.es-rc .es-recipes__img--night-desktop{display:block}#es-rc-content.es-rc .es-recipes__day-night-recipe-content--dark{clip-path:none;background:0 0;padding-top:40%;position:absolute;top:70%;left:0;z-index:1;color:#eae6d6}#es-rc-content.es-rc .es-recipes__img--night-mobile{display:none}#es-rc-content.es-rc .es-recipes__day-night-text{max-width:410px;font-size:18px}#es-rc-content.es-rc .es-recipes__day-night-recipe-content--first{margin-top:-5px}}@media screen and (min-width:998px){#es-rc-content.es-rc .es-kv__title{padding:0 15px 15px;font-size:40px}#es-rc-content.es-rc .es-kv__glass{left:26.3%;top:46.5%}#es-rc-content.es-rc .es-kv__title--small{font-size:18px}#es-rc-content.es-rc .es-kv__text{font-size:21px}#es-rc-content.es-rc .es-kv__img{max-width:100%;width:67%}#es-rc-content.es-rc .es-kv__title-group{left:7%;top:8%}#es-rc-content.es-rc .es-kv__packshot{position:absolute;right:0;top:30px;width:450px}#es-rc-content.es-rc .es-kv__packshot--photo{max-width:100%;display:block;margin:0 auto;padding:0;position:relative;z-index:1}#es-rc-content.es-rc .es-possibilities{margin-top:-34px}#es-rc-content.es-rc .es-revolution__container{background-color:transparent}#es-rc-content.es-rc .es-possibilities__title-container{top:0}#es-rc-content.es-rc .es-possibilities__right{margin-top:10px}#es-rc-content.es-rc .es-photo__text,#es-rc-content.es-rc .es-possibilities__title,#es-rc-content.es-rc .es-video__subtitle-second{font-size:36px}#es-rc-content.es-rc .es-possibilities__title--first,#es-rc-content.es-rc .es-possibilities__title--second{font-size:45px}#es-rc-content.es-rc .es-possibilities__title--second{top:44%}#es-rc-content.es-rc .es-possibilities .es-possibilities__description{max-width:92%;margin:0 auto;font-size:21px;line-height:1.6;text-align:center}#es-rc-content.es-rc .es-possibilities .es-possibilities__description--centered{margin:0 auto;max-width:90%;padding-left:0}#es-rc-content.es-rc .es-possibilities .es-possibilities__right{max-width:500px;margin-left:auto;text-align:right}#es-rc-content.es-rc .es-possibilities .es-possibilities__description-title,#es-rc-content.es-rc .es-revolution__subtitle,#es-rc-content.es-rc .es-set__subtitle{font-size:21px}#es-rc-content.es-rc .es-possibilities .es-possibilities__packshot{width:274px;margin-top:-120px}#es-rc-content.es-rc .es-possibilities .es-possibilities__text{text-align:right;margin-left:auto;font-size:22px;width:90%;line-height:1.25}#es-rc-content.es-rc .es-possibilities__img{margin-top:-150px}#es-rc-content.es-rc .es-info{margin-top:-45px}#es-rc-content.es-rc .es-info__title{line-height:1}#es-rc-content.es-rc .es-info__right{align-self:flex-start;padding-top:20px}#es-rc-content.es-rc .es-info__text{width:100%;margin-left:0;font-size:21px}#es-rc-content.es-rc .es-video__text{font-size:21px;max-width:84%}#es-rc-content.es-rc .es-video__text--second{max-width:75%}#es-rc-content.es-rc .es-recipes__day-night-title{font-size:33px;margin-bottom:30px}#es-rc-content.es-rc .es-recipes__day-night-description{font-size:22px}#es-rc-content.es-rc .es-recipes__day-night-group{max-width:400px;margin-left:15%;margin-top:-120px}#es-rc-content.es-rc .es-recipes__day-night-recipe-content{padding-left:30px;padding-right:30px;font-size:22px}#es-rc-content.es-rc .es-recipes__day-night-label--first{top:1.4%;left:40%}#es-rc-content.es-rc .es-recipes__day-night-label--second{top:-6.1%;left:3.4%}#es-rc-content.es-rc .es-photo__img{max-width:100%;height:600px}#es-rc-content.es-rc .es-photo__img--syrups{margin:0 auto;height:auto}#es-rc-content.es-rc .es-triple{margin-top:-200px}#es-rc-content.es-rc .es-triple__desc--small{max-width:370px;font-size:18px;top:100%;left:18%}#es-rc-content.es-rc .es-triple__desc-mobile--first,#es-rc-content.es-rc .es-triple__desc-mobile--second,#es-rc-content.es-rc .es-triple__desc-mobile--third{font-size:160px}#es-rc-content.es-rc .es-triple__desc-mobile--first{top:11%;left:12%}#es-rc-content.es-rc .es-triple__desc-mobile--second{top:44%;left:42%}#es-rc-content.es-rc .es-triple__desc-mobile--third{top:60%;left:6%}#es-rc-content.es-rc .es-revolution{background:url(./img/revolution-bg.png) center -60px no-repeat;margin-top:-250px}#es-rc-content.es-rc .es-revolution__packshot{max-width:36%}#es-rc-content.es-rc .es-revolution__right-description{padding-top:10%;margin-left:-20%;max-width:109%;font-size:21px}#es-rc-content.es-rc .es-set::after{bottom:2%;max-width:21%}#es-rc-content.es-rc .es-set__group{min-height:800px}#es-rc-content.es-rc .es-set__title{font-size:23px}#es-rc-content.es-rc .es-set__title--gazpacho{font-size:46px}#es-rc-content.es-rc .es-set__group-item-title{font-size:20px}#es-rc-content.es-rc .es-set__group-item-title--right{max-width:75%;text-align:right}#es-rc-content.es-rc .es-set__group-item-description{font-size:16px;max-width:75%}#es-rc-content.es-rc .es-set__group-item-description--right{text-align:right}}@media screen and (min-width:1200px){#es-rc-content.es-rc .es-kv{height:100%;min-height:1000px}#es-rc-content.es-rc .es-kv__title-group{max-width:502px}#es-rc-content.es-rc .es-kv__title{font-size:60px}#es-rc-content.es-rc .es-kv__subtitle{font-size:22px}#es-rc-content.es-rc .es-kv__text{margin:0 auto;padding-left:0;padding-bottom:30px;width:87%;font-size:21px;line-height:1.35;text-align:center}#es-rc-content.es-rc .es-title{font-size:45px}#es-rc-content.es-rc .es-set__title--gazpacho{margin-bottom:0;font-size:40px}#es-rc-content.es-rc .es-photo__text,#es-rc-content.es-rc .es-video__subtitle-second{font-size:36px}#es-rc-content.es-rc .es-video__subtitle{font-size:33px}#es-rc-content.es-rc .es-info__title{font-size:46px}#es-rc-content.es-rc .es-info__title--large{font-size:57px;margin-right:-27px}#es-rc-content.es-rc .es-possibilities__title{font-size:40px;padding-left:20px}#es-rc-content.es-rc .es-possibilities__title--first{margin-top:-10px;padding-left:60px}#es-rc-content.es-rc .es-possibilities__title--small{max-width:700px;font-size:43px}#es-rc-content.es-rc .es-possibilities__subtitle{margin-top:100px;margin-right:102px;font-size:45px}#es-rc-content.es-rc .es-possibilities__title-container{top:30px}#es-rc-content.es-rc .es-recipes__day-night-recipe-content{position:absolute;left:10%;bottom:2%}#es-rc-content.es-rc .es-recipes__day-night-recipe-content--dark{position:absolute;top:70%;left:10%;font-size:24px}#es-rc-content.es-rc .es-recipes__day-night-label{font-size:132px}#es-rc-content.es-rc .es-recipes__day-night-label--first{top:.4%}#es-rc-content.es-rc .es-recipes__day-night-label--second{top:-8.1%}#es-rc-content.es-rc .es-recipes__day-night-text{font-size:21px}#es-rc-content.es-rc .es-triple__desc--small{font-size:20px;top:111%;left:27%;text-shadow:none}#es-rc-content.es-rc .es-triple__desc--small-third{left:36%}#es-rc-content.es-rc .es-triple__desc-mobile--first,#es-rc-content.es-rc .es-triple__desc-mobile--second,#es-rc-content.es-rc .es-triple__desc-mobile--third{font-size:170px}#es-rc-content.es-rc .es-set__group{padding-top:0;min-height:834px}#es-rc-content.es-rc .es-photo__img{height:630px}#es-rc-content.es-rc .es-photo__img--syrups{height:auto}#es-rc-content.es-rc .es-possibilities{margin-top:-85px}}@media screen and (min-width:1400px){#es-rc-content.es-rc .es-video{padding-top:50px;margin-top:-120px}#es-rc-content.es-rc .es-set::after{max-width:17%}#es-rc-content.es-rc .es-set__subtitle{max-width:74%}#es-rc-content.es-rc .es-set__title{max-width:90%;font-size:29px}#es-rc-content.es-rc .es-set__title--gazpacho{font-size:40px}#es-rc-content.es-rc .es-set__group-item-title{font-size:26px}#es-rc-content.es-rc .es-set__group-item{max-width:32%}#es-rc-content.es-rc .es-set__group-item--left{margin-top:25%;margin-left:5%}#es-rc-content.es-rc .es-set__group-item--right{margin-top:-16%}#es-rc-content.es-rc .es-set__group-item-description{font-size:22px}#es-rc-content.es-rc .es-set__group-item-description--2{max-width:89%}#es-rc-content.es-rc .es-recipes__day-night-title{font-size:44px;max-width:550px}#es-rc-content.es-rc .es-recipes__day-night-group{margin-left:19%;margin-top:-198px;max-width:550px}#es-rc-content.es-rc .es-recipes__day-night-label--first{top:-2%}#es-rc-content.es-rc .es-triple{margin-top:-260px}}@keyframes slidedown{from{opacity:0;transform:translateY(-32px)}to{opacity:1;transform:translateY(0)}}@keyframes slideright{from{opacity:.3;transform:translateX(-100px)}to{opacity:1;transform:translateX(0)}}@keyframes slideleft{from{opacity:.3;transform:translateX(100px)}to{opacity:1;transform:translateX(0)}}</style>
+  <style>
+    #es-rc-content.es-rc .es-kv__subtitle,#es-rc-content.es-rc .es-kv__title,#es-rc-content.es-rc .es-kv__title--small,#es-rc-content.es-rc .es-title{font-family:Gazpacho-Bold,sans-serif;font-weight:700;text-align:center}@font-face{font-family:HurmeGeometricSans3-Bold;src:local('HurmeGeometricSans3-Bold'),url('./fonts/HurmeGeometricSans3-Bold.woff2') format('truetype')}@font-face{font-family:HurmeGeometricSans3-Regular;src:local('HurmeGeometricSans3-Regular'),url('./fonts/HurmeGeometricSans3-Regular.woff2') format('truetype')}@font-face{font-family:HurmeGeometricSans3-Black;src:local('HurmeGeometricSans3-Black'),url('./fonts/HurmeGeometricSans3-Black.woff2') format('truetype')}@font-face{font-family:HurmeGeometricSans3-Light;src:local('HurmeGeometricSans3-Light'),url('./fonts/HurmeGeometricSans3-Light.woff2') format('truetype')}@font-face{font-family:Gazpacho-Bold;src:local('Gazpacho-Bold'),url('./fonts/Gazpacho-Bold.woff2') format('truetype')}@font-face{font-family:Gazpacho-Regular;src:local('Gazpacho-Regular'),url('./fonts/Gazpacho-Regular.woff2') format('truetype')}#es-rc-content.es-rc{font-family:HurmeGeometricSans3-Regular,sans-serif;font-size:16px;font-weight:300;line-height:1.2;max-width:1110px;margin:0 auto;padding:0;overflow:hidden;color:#000;background:#e8e2d4}#es-rc-content.es-rc p{line-height:inherit}#es-rc-content.es-rc .es-title{margin:32px 0;padding:0;line-height:inherit;color:inherit;font-size:36px}#es-rc-content.es-rc body,#es-rc-content.es-rc html{margin:0;padding:0}#es-rc-content.es-rc *{box-sizing:border-box}#es-rc-content.es-rc h2,#es-rc-content.es-rc p{margin:0}#es-rc-content.es-rc .es-kv{margin:0;padding:0 5px;position:relative}#es-rc-content.es-rc .es-kv__logo{position:relative;padding:30px 15px;max-width:90%;margin:0 auto}#es-rc-content.es-rc .es-kv__title{position:relative;margin:0;padding:5px 0 15px;font-size:35px;line-height:1}#es-rc-content.es-rc .es-kv__title--small{font-size:14px}#es-rc-content.es-rc .es-kv__subtitle{font-size:18px;padding-bottom:15px}#es-rc-content.es-rc .es-kv__packshot,#es-rc-content.es-rc .es-triple,#es-rc-content.es-rc .es-triple__mobile-container{position:relative}#es-rc-content.es-rc .es-kv__glass{display:none;position:absolute}#es-rc-content.es-rc .es-kv__packshot--photo{max-width:100%;display:block;margin:0 auto;position:relative;z-index:1}#es-rc-content.es-rc .es-kv__img{max-width:60%;display:block;margin:0 auto}#es-rc-content.es-rc .es-kv__text{font-family:HurmeGeometricSans3-Regular,sans-serif;font-weight:400;margin:0 auto 30px;text-align:center;padding:0 10px;font-size:16px}#es-rc-content.es-rc .es-set{background-color:#e8e3d1}#es-rc-content.es-rc .es-set__title{max-width:90%;margin:0 auto 20px;font-family:HurmeGeometricSans3-Bold,sans-serif;font-size:20px;font-weight:700;text-align:center}#es-rc-content.es-rc .es-set__title--gazpacho{font-family:Gazpacho-Bold,sans-serif;font-weight:700;font-size:26px}#es-rc-content.es-rc .es-set__subtitle{margin:0 auto 50px;max-width:90%;text-align:center;font-size:16px}#es-rc-content.es-rc .es-set__group{padding:30px 15px;background-color:#000;color:#eae6d6}#es-rc-content.es-rc .es-set__group-item-title{font-family:Gazpacho-Bold,sans-serif;font-weight:700;margin-bottom:10px;font-size:16px}#es-rc-content.es-rc .es-set__group-item-description{font-family:Gazpacho-Bold,sans-serif;font-weight:700;font-size:14px;margin-bottom:20px}#es-rc-content.es-rc .es-recipes__img,#es-rc-content.es-rc .es-set__group-img{margin:0 auto;display:block;max-width:100%}#es-rc-content.es-rc .es-set__group-img--mobile{max-width:50%}#es-rc-content.es-rc .es-recipes__img--night-desktop,#es-rc-content.es-rc .es-set__group-img--desktop,#es-rc-content.es-rc .es-triple__desktop-container{display:none}#es-rc-content.es-rc .es-revolution{margin-top:-100px;padding-top:100px;background:url(./img/revolution-bg.png) center -100px no-repeat}#es-rc-content.es-rc .es-revolution__title{font-size:26px}#es-rc-content.es-rc .es-revolution__subtitle{font-family:HurmeGeometricSans3-Regular,sans-serif;font-weight:400;padding-left:10px;padding-right:10px;text-align:center}#es-rc-content.es-rc .es-revolution__packshot{margin:0 auto;display:block;max-width:50%;padding-top:30px}#es-rc-content.es-rc .es-revolution__container{background-color:#ded1bb}#es-rc-content.es-rc .es-revolution__right{padding-top:20px;margin-top:-20px;padding-left:15px;padding-right:15px}#es-rc-content.es-rc .es-revolution__right-description{font-family:HurmeGeometricSans3-Regular,sans-serif;font-weight:400;font-size:16px;padding-bottom:30px;padding-top:30px}#es-rc-content.es-rc .es-info__text b,#es-rc-content.es-rc .es-revolution__right-description--bold{font-family:HurmeGeometricSans3-Bold,sans-serif;font-weight:700}#es-rc-content.es-rc .es-info{margin:0;padding:0 0 100px;background-color:#eae6d6}#es-rc-content.es-rc .es-info__title{position:relative;margin:0 auto;padding:25px;color:#000;text-align:center;font-size:26px}#es-rc-content.es-rc .es-info__title--large{display:block;text-align:right;font-size:32px}#es-rc-content.es-rc .es-info__text{width:90%;margin:0 auto;padding:0;font-family:HurmeGeometricSans3-Regular,sans-serif;font-weight:500;color:#000}#es-rc-content.es-rc .es-possibilities{margin:30px 0 0;padding-top:75px}#es-rc-content.es-rc .es-possibilities__content{padding:30px 15px}#es-rc-content.es-rc .es-possibilities__description--centered{text-align:center}#es-rc-content.es-rc .es-possibilities__description-title{padding-top:30px;font-family:Gazpacho-Bold,sans-serif;font-weight:500;text-align:center;font-size:16px}#es-rc-content.es-rc .es-possibilities__description-bold{font-family:HurmeGeometricSans3-Bold,sans-serif;font-weight:700;text-align:center}#es-rc-content.es-rc .es-possibilities__description-bold--first{display:block;font-size:23px;margin-bottom:10px}#es-rc-content.es-rc .es-possibilities__title{position:relative;margin:0;padding:30px 0 0;font-family:Gazpacho-Bold,sans-serif;font-size:20px;font-weight:700}#es-rc-content.es-rc .es-possibilities__title--first{margin-top:-30px;padding-left:20px}#es-rc-content.es-rc .es-possibilities__title--second{position:absolute;top:44%;left:-10px;color:#e8e2d4}#es-rc-content.es-rc .es-possibilities__title-container{top:-75px;position:relative}#es-rc-content.es-rc .es-possibilities__title-group{position:relative;max-width:72%;min-width:50%}#es-rc-content.es-rc .es-possibilities__subtitle{margin:0;padding:20px 10px 0 0;font-size:20px;font-family:Gazpacho-Bold,sans-serif;font-weight:700;text-align:right}#es-rc-content.es-rc .es-possibilities__img{max-width:100%;display:block;margin:-103px auto 0}#es-rc-content.es-rc .es-possibilities__text{padding-top:20px;font-family:HurmeGeometricSans3-Regular,sans-serif;font-weight:400}#es-rc-content.es-rc .es-possibilities__packshot{margin:0 auto;display:block;max-width:50%}#es-rc-content.es-rc .es-photo__img{display:block;margin:0 auto 0 -1%;padding:15px 0 30px;max-width:60%}#es-rc-content.es-rc .es-photo__img--syrups{margin:0 auto;max-width:90%}#es-rc-content.es-rc .es-triple__pepper{position:absolute;top:1%;left:3%;margin:0 auto;display:block;max-width:20%}#es-rc-content.es-rc .es-triple__title{position:relative;margin:0;padding:15px 15px 0;font-family:HurmeGeometricSans3-Bold,sans-serif;text-align:center;text-transform:uppercase;font-size:36px;font-weight:700}#es-rc-content.es-rc .es-triple__text{margin:0 auto;padding:0 15px 30px;line-height:inherit;color:inherit;font-weight:inherit;width:80%;font-size:20px;font-family:HurmeGeometricSans3-Light,sans-serif;text-align:center}#es-rc-content.es-rc .es-triple__wrapper{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-around}#es-rc-content.es-rc .es-triple__single{height:100%;position:relative}#es-rc-content.es-rc .es-triple__desc{margin:0;padding:20px 0 0;position:absolute;top:25px;left:0;font-family:HurmeGeometricSans3-Bold,sans-serif;font-weight:700;color:#fff;font-size:35px;text-align:center}#es-rc-content.es-rc .es-triple__desc--small{position:absolute;top:102%;left:10%;font-size:9px;width:120%;text-align:right;text-shadow:1px 1px 2px rgba(0,0,0,.25)}#es-rc-content.es-rc .es-triple__desc--first{top:20%;left:24%}#es-rc-content.es-rc .es-triple__desc--second{top:32%;left:41%}#es-rc-content.es-rc .es-triple__desc--third{top:21%;left:16%}#es-rc-content.es-rc .es-triple__desc-mobile--first,#es-rc-content.es-rc .es-triple__desc-mobile--second,#es-rc-content.es-rc .es-triple__desc-mobile--third{position:absolute;font-family:HurmeGeometricSans3-Black,sans-serif;font-weight:800;color:#fff;font-size:45px;text-align:center}#es-rc-content.es-rc .es-triple__desc-mobile--first{top:7%;left:10%}#es-rc-content.es-rc .es-triple__desc-mobile--second{top:39%;left:37%}#es-rc-content.es-rc .es-triple__desc-mobile--third{top:57%;left:2%}#es-rc-content.es-rc .es-triple__img{max-width:100%;display:block;margin:0 auto;min-width:250px}#es-rc-content.es-rc .es-recipes__day-night-title{max-width:350px;margin-bottom:20px;padding-left:10px;padding-right:10px;font-family:Gazpacho-Bold,sans-serif;font-weight:500;font-size:24px}#es-rc-content.es-rc .es-recipes__day-night-description{padding-left:10px;padding-right:10px;margin-bottom:30px;font-family:HurmeGeometricSans3-Regular,sans-serif;font-weight:400;font-size:16px}#es-rc-content.es-rc .es-recipes__day-night{position:relative;margin-bottom:50px}#es-rc-content.es-rc .es-recipes__day-night--second{margin-bottom:50px}#es-rc-content.es-rc .es-recipes__day-night-text{font-family:HurmeGeometricSans3-Bold,sans-serif;font-weight:500;font-size:16px}#es-rc-content.es-rc .es-recipes__day-night-label{position:absolute;margin-top:30px;padding-left:10px;padding-right:10px;font-family:Gazpacho-Bold,sans-serif;font-weight:700;font-size:60px}#es-rc-content.es-rc .es-recipes__day-night-label--first{color:#fff;top:7%;left:40%}#es-rc-content.es-rc .es-recipes__day-night-label--second{color:#000;top:-6%;left:0}#es-rc-content.es-rc .es-recipes__day-night-recipe-content-title{margin-bottom:20px;font-family:Gazpacho-Bold,sans-serif;font-weight:700;font-size:26px}#es-rc-content.es-rc .es-recipes__day-night-recipe-content-title--small{margin-bottom:20px;font-family:Gazpacho-Bold,sans-serif;font-weight:700;font-size:16px}#es-rc-content.es-rc .es-recipes__day-night-recipe-content{padding-left:10px;padding-right:10px;z-index:1;font-size:13px}#es-rc-content.es-rc .es-recipes__day-night-recipe-content--dark{background-color:#000;padding-top:30%;padding-bottom:135px;margin-top:-38%;color:#fff;clip-path:polygon(0 0%,100% 32%,100% 67%,0 100%)}#es-rc-content.es-rc .es-recipes__day-night-recipe-content-ingredients-list{padding-left:20px;max-width:90%}#es-rc-content.es-rc .es-recipes__day-night-recipe-content-ingredients-list li{margin-bottom:10px}#es-rc-content.es-rc .es-video{margin:0 auto 34px;width:95%;position:relative}#es-rc-content.es-rc .es-video__title{margin:0 0 30px;padding:0;font-size:26px;text-align:center}#es-rc-content.es-rc .es-video__subtitle{margin:0 0 20px;padding:0;font-family:Gazpacho-Bold,sans-serif;font-weight:500;text-align:center;font-size:18px}#es-rc-content.es-rc .es-video__subtitle-second{font-family:Gazpacho-Bold,sans-serif;font-weight:700;font-size:23px}#es-rc-content.es-rc .es-video__text{font-family:HurmeGeometricSans3-Regular,sans-serif;font-weight:400;text-align:center;max-width:100%;margin-bottom:20px}#es-rc-content.es-rc .es-video__container{margin:0 auto;width:100%;position:relative;padding-bottom:46.25%;height:0}#es-rc-content.es-rc .es-video__iframe{border:0;position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;max-height:540px}#es-rc-content.es-rc .es-video__img{display:block;margin:0 auto;max-width:200px}#es-rc-content.es-rc .es-photo__text{font-size:23px}@media screen and (min-width:500px){#es-rc-content.es-rc .es-recipes__day-night-recipe-content{font-size:16px}#es-rc-content.es-rc .es-recipes__day-night{margin-bottom:100px}#es-rc-content.es-rc .es-recipes__day-night-group{max-width:395px;margin:0 auto 0 10%}#es-rc-content.es-rc .es-recipes__day-night-label--first{top:8%;left:44%}#es-rc-content.es-rc .es-recipes__day-night-label--second{top:-4%;left:0}#es-rc-content.es-rc .es-set__group-img--mobile{max-width:40%}#es-rc-content.es-rc .es-triple__wrapper{flex-wrap:nowrap}#es-rc-content.es-rc .es-triple__desc-mobile--first,#es-rc-content.es-rc .es-triple__desc-mobile--second,#es-rc-content.es-rc .es-triple__desc-mobile--third{font-size:70px}#es-rc-content.es-rc .es-triple__desc-mobile--first{top:10%;left:19%}#es-rc-content.es-rc .es-triple__desc-mobile--second{top:39%;left:38%}#es-rc-content.es-rc .es-triple__desc-mobile--third{top:61%;left:16%}#es-rc-content.es-rc .es-triple__desc--small{max-width:300px;font-size:12px;top:110%;left:-12%;text-shadow:none}#es-rc-content.es-rc .es-triple__desc--small-third{left:-18%;top:105%}#es-rc-content.es-rc .es-video{margin-top:-50px}#es-rc-content.es-rc .es-video__img{max-width:300px}#es-rc-content.es-rc .es-video__text{max-width:80%;margin:0 auto 30px}}@media screen and (min-width:600px){#es-rc-content.es-rc .es-title{font-size:46px}#es-rc-content.es-rc .es-photo__text,#es-rc-content.es-rc .es-video__subtitle-second{font-size:36px}#es-rc-content.es-rc .es-photo__img{max-width:80%}#es-rc-content.es-rc .es-set{position:relative}#es-rc-content.es-rc .es-set__group{display:flex;align-items:center;justify-content:space-between;gap:10px;background:url('./img/set-packshot.png') center center/cover no-repeat;min-height:500px}#es-rc-content.es-rc .es-set__group-item{max-width:32%}#es-rc-content.es-rc .es-set__group-item--left{margin-top:22%;position:relative}#es-rc-content.es-rc .es-set__group-item--left::after{content:'';display:block;position:absolute;top:-65%;left:37%;background:url('./img/arrow.png') center center/contain no-repeat;width:191px;max-width:64%;height:100%}#es-rc-content.es-rc .es-set__group-item--right{margin-top:-25%;margin-right:-3%;position:relative}#es-rc-content.es-rc .es-set__group-item--right::after{content:'';display:block;position:absolute;top:68%;left:-8%;background:url(./img/arrow.png) center center/contain no-repeat;width:191px;max-width:64%;height:100%;transform:rotateY(180deg) scaleY(-1) rotate(-10deg)}#es-rc-content.es-rc .es-set__group-img--mobile{display:none}#es-rc-content.es-rc .es-recipes{display:flex;margin-top:50px}#es-rc-content.es-rc .es-recipes__day-night{max-width:50%}#es-rc-content.es-rc .es-recipes__day-night-label--second{top:-6%;left:0}#es-rc-content.es-rc .es-recipes__day-night-recipe-content--dark{top:47%}#es-rc-content.es-rc .es-recipes__day-night-recipe-content{padding-left:10px;padding-right:10px;z-index:1;font-size:13px}#es-rc-content.es-rc .es-recipes__day-night-label--first{top:11%}#es-rc-content.es-rc .es-possibilities{margin:30px 0 0}#es-rc-content.es-rc .es-possibilities__title-group{max-width:60%}#es-rc-content.es-rc .es-possibilities__left,#es-rc-content.es-rc .es-possibilities__right{min-width:50%}#es-rc-content.es-rc .es-possibilities__right{min-width:60%;max-width:500px;margin-left:auto;text-align:right}#es-rc-content.es-rc .es-possibilities__content{padding:30px}#es-rc-content.es-rc .es-possibilities__title{font-size:25px}#es-rc-content.es-rc .es-possibilities__title--first,#es-rc-content.es-rc .es-possibilities__title--second{font-size:35px}#es-rc-content.es-rc .es-possibilities__title--second{left:0}#es-rc-content.es-rc .es-triple{margin-top:-50px}#es-rc-content.es-rc .es-info__container{display:flex;align-items:center;justify-content:center}#es-rc-content.es-rc .es-info__left{width:40%}#es-rc-content.es-rc .es-info__right{width:60%}#es-rc-content.es-rc .es-revolution{margin-top:-150px;padding-top:150px}#es-rc-content.es-rc .es-revolution__subtitle{margin:0 auto;max-width:84%}#es-rc-content.es-rc .es-revolution__container{display:flex;justify-content:space-between;gap:20px;padding-bottom:30px}#es-rc-content.es-rc .es-revolution__left,#es-rc-content.es-rc .es-revolution__right{width:50%}}@media screen and (min-width:700px){#es-rc-content.es-rc .es-triple__desc-mobile--first,#es-rc-content.es-rc .es-triple__desc-mobile--second,#es-rc-content.es-rc .es-triple__desc-mobile--third{font-size:90px}#es-rc-content.es-rc .es-triple__desc-mobile--first{top:12%;left:19%}#es-rc-content.es-rc .es-triple__desc-mobile--second{top:41%;left:40%}#es-rc-content.es-rc .es-triple__desc-mobile--third{top:63%;left:18%}#es-rc-content.es-rc .es-triple__desc--small{font-size:14px}#es-rc-content.es-rc .es-triple__desc--small-third{left:0}}@media screen and (min-width:768px){#es-rc-content.es-rc .es-kv{background:url('./img/packshot.png') center center/cover no-repeat;min-height:900px;padding-bottom:300px;position:relative}#es-rc-content.es-rc .es-kv__glass{display:none;top:40%;left:15%}#es-rc-content.es-rc .es-kv__img,#es-rc-content.es-rc .es-kv__logo{margin:0}#es-rc-content.es-rc .es-kv__packshot{display:none;position:absolute;right:0;top:30px;width:350px}#es-rc-content.es-rc .es-kv__title{font-size:35px}#es-rc-content.es-rc .es-kv__title--left{display:block;text-align:left;max-width:70%}#es-rc-content.es-rc .es-kv__title--small{text-align:left}#es-rc-content.es-rc .es-kv__packshot--photo{max-width:100%;display:block;margin:0 auto;padding:0;position:relative;z-index:1}#es-rc-content.es-rc .es-kv__title-group{position:absolute;max-width:455px;left:10%;top:13%;margin:0 auto;text-align:center}#es-rc-content.es-rc .es-kv__text{padding-top:30px;padding-bottom:30px;margin:0 auto;width:90%;text-align:center;font-size:17px}#es-rc-content.es-rc .es-info__titleBig,#es-rc-content.es-rc .es-triple__title{font-size:50px}#es-rc-content.es-rc .es-info__title--large{font-size:42px;margin-right:50px}#es-rc-content.es-rc .es-recipes__day-night-title{font-size:20px}#es-rc-content.es-rc .es-recipes__day-night--first{margin-top:0}#es-rc-content.es-rc .es-recipes__day-night--second{padding-top:0;margin-top:-32px}#es-rc-content.es-rc .es-recipes__day-night-recipe-content-title{margin-bottom:20px;font-family:Gazpacho-Bold,sans-serif;font-weight:700;font-size:35px}#es-rc-content.es-rc .es-recipes__day-night-recipe-content-title--small{font-size:26px}#es-rc-content.es-rc .es-recipes__day-night-label{font-size:80px}#es-rc-content.es-rc .es-recipes__day-night-label--first{top:10%}#es-rc-content.es-rc .es-recipes__day-night-label--second{top:-8%;left:0}#es-rc-content.es-rc .es-recipes__day-night-recipe-content{font-size:18px}#es-rc-content.es-rc .es-set::after{height:500px}#es-rc-content.es-rc .es-set__group{min-height:600px}}@media screen and (min-width:825px){#es-rc-content.es-rc .es-recipes__img--night-desktop{display:block}#es-rc-content.es-rc .es-recipes__day-night-recipe-content--dark{clip-path:none;background:0 0;padding-top:40%;position:absolute;top:70%;left:0;z-index:1;color:#eae6d6}#es-rc-content.es-rc .es-recipes__img--night-mobile{display:none}#es-rc-content.es-rc .es-recipes__day-night-text{max-width:410px;font-size:18px}#es-rc-content.es-rc .es-recipes__day-night-recipe-content--first{margin-top:-5px}}@media screen and (min-width:998px){#es-rc-content.es-rc .es-kv__title{padding:0 15px 15px;font-size:40px}#es-rc-content.es-rc .es-kv__glass{left:26.3%;top:46.5%}#es-rc-content.es-rc .es-kv__title--small{font-size:18px}#es-rc-content.es-rc .es-kv__text{font-size:21px}#es-rc-content.es-rc .es-kv__img{max-width:100%;width:67%}#es-rc-content.es-rc .es-kv__title-group{left:7%;top:8%}#es-rc-content.es-rc .es-kv__packshot{position:absolute;right:0;top:30px;width:450px}#es-rc-content.es-rc .es-kv__packshot--photo{max-width:100%;display:block;margin:0 auto;padding:0;position:relative;z-index:1}#es-rc-content.es-rc .es-possibilities{margin-top:-34px}#es-rc-content.es-rc .es-revolution__container{background-color:transparent}#es-rc-content.es-rc .es-possibilities__title-container{top:0}#es-rc-content.es-rc .es-possibilities__right{margin-top:10px}#es-rc-content.es-rc .es-photo__text,#es-rc-content.es-rc .es-possibilities__title,#es-rc-content.es-rc .es-video__subtitle-second{font-size:36px}#es-rc-content.es-rc .es-possibilities__title--first,#es-rc-content.es-rc .es-possibilities__title--second{font-size:45px}#es-rc-content.es-rc .es-possibilities__title--second{top:44%}#es-rc-content.es-rc .es-possibilities .es-possibilities__description{max-width:92%;margin:0 auto;font-size:21px;line-height:1.6;text-align:center}#es-rc-content.es-rc .es-possibilities .es-possibilities__description--centered{margin:0 auto;max-width:90%;padding-left:0}#es-rc-content.es-rc .es-possibilities .es-possibilities__right{max-width:500px;margin-left:auto;text-align:right}#es-rc-content.es-rc .es-possibilities .es-possibilities__description-title,#es-rc-content.es-rc .es-revolution__subtitle,#es-rc-content.es-rc .es-set__subtitle{font-size:21px}#es-rc-content.es-rc .es-possibilities .es-possibilities__packshot{width:274px;margin-top:-120px}#es-rc-content.es-rc .es-possibilities .es-possibilities__text{text-align:right;margin-left:auto;font-size:22px;width:90%;line-height:1.25}#es-rc-content.es-rc .es-possibilities__img{margin-top:-150px}#es-rc-content.es-rc .es-info{margin-top:-45px}#es-rc-content.es-rc .es-info__title{line-height:1}#es-rc-content.es-rc .es-info__right{align-self:flex-start;padding-top:20px}#es-rc-content.es-rc .es-info__text{width:100%;margin-left:0;font-size:21px}#es-rc-content.es-rc .es-video__text{font-size:21px;max-width:84%}#es-rc-content.es-rc .es-video__text--second{max-width:75%}#es-rc-content.es-rc .es-recipes__day-night-title{font-size:33px;margin-bottom:30px}#es-rc-content.es-rc .es-recipes__day-night-description{font-size:22px}#es-rc-content.es-rc .es-recipes__day-night-group{max-width:400px;margin-left:15%;margin-top:-120px}#es-rc-content.es-rc .es-recipes__day-night-recipe-content{padding-left:30px;padding-right:30px;font-size:22px}#es-rc-content.es-rc .es-recipes__day-night-label--first{top:1.4%;left:40%}#es-rc-content.es-rc .es-recipes__day-night-label--second{top:-6.1%;left:3.4%}#es-rc-content.es-rc .es-photo__img{max-width:100%;height:600px}#es-rc-content.es-rc .es-photo__img--syrups{margin:0 auto;height:auto}#es-rc-content.es-rc .es-triple{margin-top:-200px}#es-rc-content.es-rc .es-triple__desc--small{max-width:370px;font-size:18px;top:104%;left:25%}#es-rc-content.es-rc .es-triple__desc-mobile--first,#es-rc-content.es-rc .es-triple__desc-mobile--second,#es-rc-content.es-rc .es-triple__desc-mobile--third{font-size:160px}#es-rc-content.es-rc .es-triple__desc-mobile--first{top:11%;left:12%}#es-rc-content.es-rc .es-triple__desc-mobile--second{top:44%;left:42%}#es-rc-content.es-rc .es-triple__desc-mobile--third{top:61%;left:6%}#es-rc-content.es-rc .es-revolution{background:url(./img/revolution-bg.png) center -60px no-repeat;margin-top:-250px}#es-rc-content.es-rc .es-revolution__packshot{max-width:36%}#es-rc-content.es-rc .es-revolution__right-description{padding-top:10%;margin-left:-20%;max-width:109%;font-size:21px}#es-rc-content.es-rc .es-set::after{bottom:2%;max-width:21%}#es-rc-content.es-rc .es-set__group{min-height:800px}#es-rc-content.es-rc .es-set__title{font-size:23px}#es-rc-content.es-rc .es-set__title--gazpacho{font-size:46px}#es-rc-content.es-rc .es-set__group-item-title{font-size:20px}#es-rc-content.es-rc .es-set__group-item-title--right{max-width:75%;text-align:right}#es-rc-content.es-rc .es-set__group-item-description{font-size:16px;max-width:75%}#es-rc-content.es-rc .es-set__group-item-description--right{text-align:right}}@media screen and (min-width:1200px){#es-rc-content.es-rc .es-kv{height:100%;min-height:1050px}#es-rc-content.es-rc .es-kv__title-group{max-width:502px}#es-rc-content.es-rc .es-kv__title{font-size:60px}#es-rc-content.es-rc .es-kv__subtitle{font-size:22px}#es-rc-content.es-rc .es-kv__text{margin:0 auto;padding-left:0;padding-bottom:30px;width:87%;font-size:21px;line-height:1.35;text-align:center}#es-rc-content.es-rc .es-title{font-size:45px}#es-rc-content.es-rc .es-set__title--gazpacho{margin-bottom:0;font-size:40px}#es-rc-content.es-rc .es-photo__text,#es-rc-content.es-rc .es-video__subtitle-second{font-size:36px}#es-rc-content.es-rc .es-video__subtitle{font-size:33px}#es-rc-content.es-rc .es-info__title{font-size:46px}#es-rc-content.es-rc .es-info__title--large{font-size:57px;margin-right:-27px}#es-rc-content.es-rc .es-possibilities__title{font-size:40px;padding-left:20px}#es-rc-content.es-rc .es-possibilities__title--first{margin-top:-10px;padding-left:60px}#es-rc-content.es-rc .es-possibilities__title--small{max-width:700px;font-size:43px}#es-rc-content.es-rc .es-possibilities__subtitle{margin-top:100px;margin-right:102px;font-size:45px}#es-rc-content.es-rc .es-possibilities__title-container{top:30px}#es-rc-content.es-rc .es-recipes__day-night-recipe-content{position:absolute;left:10%;bottom:2%}#es-rc-content.es-rc .es-recipes__day-night-recipe-content--dark{position:absolute;top:70%;left:10%;font-size:24px}#es-rc-content.es-rc .es-recipes__day-night-label{font-size:132px}#es-rc-content.es-rc .es-recipes__day-night-label--first{top:.4%}#es-rc-content.es-rc .es-recipes__day-night-label--second{top:-8.1%}#es-rc-content.es-rc .es-recipes__day-night-text{font-size:21px}#es-rc-content.es-rc .es-triple__desc--small{font-size:20px;top:111%;left:27%;text-shadow:none}#es-rc-content.es-rc .es-triple__desc--small-third{left:36%}#es-rc-content.es-rc .es-triple__desc-mobile--first,#es-rc-content.es-rc .es-triple__desc-mobile--second,#es-rc-content.es-rc .es-triple__desc-mobile--third{font-size:170px}#es-rc-content.es-rc .es-set__group{padding-top:0;min-height:834px}#es-rc-content.es-rc .es-photo__img{height:630px}#es-rc-content.es-rc .es-photo__img--syrups{height:auto}#es-rc-content.es-rc .es-possibilities{margin-top:-85px}}@media screen and (min-width:1400px){#es-rc-content.es-rc .es-video{padding-top:50px;margin-top:-120px}#es-rc-content.es-rc .es-set::after{max-width:17%}#es-rc-content.es-rc .es-set__subtitle{max-width:74%}#es-rc-content.es-rc .es-set__title{max-width:90%;font-size:29px}#es-rc-content.es-rc .es-set__title--gazpacho{font-size:40px}#es-rc-content.es-rc .es-set__group-item-title{font-size:26px}#es-rc-content.es-rc .es-set__group-item{max-width:32%}#es-rc-content.es-rc .es-set__group-item--left{margin-top:25%;margin-left:5%}#es-rc-content.es-rc .es-set__group-item--right{margin-top:-16%}#es-rc-content.es-rc .es-set__group-item-description{font-size:22px}#es-rc-content.es-rc .es-set__group-item-description--2{max-width:89%}#es-rc-content.es-rc .es-recipes__day-night-title{font-size:44px;max-width:550px}#es-rc-content.es-rc .es-recipes__day-night-group{margin-left:19%;margin-top:-198px;max-width:550px}#es-rc-content.es-rc .es-recipes__day-night-label--first{top:-2%}#es-rc-content.es-rc .es-triple{margin-top:-260px}#es-rc-content.es-rc .es-triple__desc--small-first{left:29%}#es-rc-content.es-rc .es-triple__desc--small-second{top:107%;left:31%}#es-rc-content.es-rc .es-triple__desc--small-third{top:107%;left:38%}}@keyframes slidedown{from{opacity:0;transform:translateY(-32px)}to{opacity:1;transform:translateY(0)}}@keyframes slideright{from{opacity:.3;transform:translateX(-100px)}to{opacity:1;transform:translateX(0)}}@keyframes slideleft{from{opacity:.3;transform:translateX(100px)}to{opacity:1;transform:translateX(0)}}
+  </style>
 </head>
 
-  <body>
-    <div class="es-rc"
-         id="es-rc-content">
-      <div class="es-kv">
-        <div class="es-kv__packshot">
-          <img class="es-kv__packshot--photo"
-               src="./img/packshot.png"
-               alt="Sodastream Crafted opakowanie">
+    <body>
+        <div class="es-rc"
+             id="es-rc-content">
+            <div class="es-kv">
+                <div class="es-kv__packshot">
+                    <img class="es-kv__packshot--photo"
+                         src="./img/packshot.png"
+                         alt="Sodastream Crafted opakowanie">
+                </div>
+
+                <div class="es-kv__title-group">
+                    <div class="es-kv__logo">
+                        <img class="es-kv__img"
+                             src="./img/logo.png"
+                             alt="logotyp Sodastream">
+                    </div>
+                    <h3 class="es-kv__title">
+                        <span class="es-kv__title--left">
+                            Zestaw do&nbsp;koktajli
+                            <br>
+                            i moktajli
+                        </span>
+                    </h3>
+                </div>
+                <img class="es-kv__glass"
+                     src="./img/glass.png"
+                     loading="lazy"
+                     alt="glass">
+            </div>
+
+            <div class="es-set">
+                <p class="es-kv__text">
+                    Daj się ponieść magii smaku z limitowanym zestawem SodaStream Crafted Grejpfrut
+                    &&nbsp;Kwiat&nbsp;Czarnego Bzu. Znajdziesz w nim nie tylko syrop smakowy, lecz również limitowaną
+                    butelkę inspirowaną niebanalną kompozycją grejpfruta i czarnego bzu.
+                </p>
+                <h3 class="es-set__title">
+                    Poznaj nową, wyrafinowaną kompozycję smakową SodaStream
+                    Crafted Grejpfrut & Kwiat Czarnego Bzu.
+                </h3>
+                <p class="es-set__subtitle">
+                    Pomarańczowo-żółta kolorystyka i owocowo-kwiatowa grafika idealnie korespondują
+                    ze smakiem syropu. To zestaw dla wszystkich, którzy cenią designerskie dodatki
+                    i&nbsp;chcą dodać codzienności jeszcze więcej koloru.
+                </p>
+                <h3 class="es-set__title es-set__title--gazpacho es-title">
+                    Co znajdziesz w&nbsp;zestawie?
+                </h3>
+                <div class="es-set__group">
+                    <div class="es-set__group-item es-set__group-item--left">
+                        <p class="es-set__group-item-title es-set__group-item-title--right">
+                            Syrop SodaStream<br> Crafted Grejpfrut & <br>Kwiat Czarnego<br> Bzu 330 ml:
+                        </p>
+
+                        <p class="es-set__group-item-description es-set__group-item-description--right">
+                            Autorska baza<br>
+                            do koktajli i moktajli,<br>
+                            z którą przygotujesz wyjątkowe napoje.
+                        </p>
+                    </div>
+                    <div class="es-set__group-packshots">
+                        <img class="es-set__group-img es-set__group-img--mobile"
+                             src="./img/set-packshot-m.png"
+                             alt="">
+
+                        <img class="es-set__group-img es-set__group-img--desktop"
+                             src="./img/set-packshot.png"
+                             alt="">
+                    </div>
+                    <div class="es-set__group-item es-set__group-item--right">
+                        <p class="es-set__group-item-title">
+                            Butelka SodaStream <br>Fuse 1 l:
+                        </p><br>
+                        <p class="es-set__group-item-description es-set__group-item-description--2">
+                            Zaprojektowana <br>
+                            jako dopełnienie<br>
+                            syropu, design<br>
+                            nawiązuje stylistycznie<br>
+                            do czarującego duetu grejpfruta i&nbsp;czarnego bzu.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="es-info">
+                <h3 class="es-info__title es-title">Gdy design i smak wirują<br>
+                    w hipnotyzującym rytmie
+                </h3>
+                <div class="es-info__container">
+                    <div class="es-info__left">
+                        <img class="es-photo__img"
+                             src="./img/photo.png"
+                             alt="Kubek z Sodastream">
+                    </div>
+                    <div class="es-info__right">
+                        <p class="es-info__text">
+                            <b>Oryginalny smak, w którym się zakochasz</b>
+
+                            <br>
+                            <br>
+                            Masz ochotę na niebanalną harmonię smaków,
+                            których&nbsp;połączenie&nbsp;zaskoczy Ciebie i Twoich bliskich? Skosztuj&nbsp;wyjątkowego
+                            syropu SodaStream Crafted
+                            Grejpfrut&nbsp;&&nbsp;Kwiat&nbsp;Czarnego Bzu! Ta wyrafinowana
+                            kompozycja&nbsp;smaków&nbsp;soczystego
+                            grejpfruta
+                            i&nbsp;romantycznych&nbsp;kwiatów&nbsp;czarnego bzu oczaruje
+                            Twoich&nbsp;gości&nbsp;i&nbsp;zaprosi Was do celebracji mikromomentów.
+
+                            <br>
+                            <br>
+                            <br>
+                            <b>Stylowa butelka, z którą podkręcisz doznania
+                            </b>
+                            <br>
+                            <br>
+                            Chcesz, by Twoje codzienne rytuały zyskały wyjątkową oprawę?&nbsp;Stylowa butelka Fuse o
+                            pojemności 1 l
+                            to&nbsp;dodatek,&nbsp;który&nbsp;podkreśli smak Twoich ulubionych
+                            napojów.&nbsp;Jej&nbsp;unikalny design
+                            nawiązuje
+                            do
+                            kompozycji
+                            syropu,&nbsp;dopełniając jego walory smakowe kolorową grafiką.&nbsp;To&nbsp;praktyczny
+                            gadżet, który
+                            wprowadzi
+                            do&nbsp;Twojej&nbsp;kuchni&nbsp;odrobinę świeżości!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="es-revolution">
+                <h3 class="es-revolution__title es-title">Styl, komfort<br>
+                    i funkcjonalność w&nbsp;jednym
+                </h3>
+                <p class="es-revolution__subtitle">
+                    W zestawie SodaStream Crafted Grejpfrut & Kwiat Czarnego Bzu z limitowanej edycji Crafted znajdziesz
+                    butelkę,
+                    która
+                    łączy nowoczesny design i funkcjonalność. Jest wielorazowa, trwała
+                    i&nbsp;praktyczna – by zapewnić Ci komfort podczas codziennego użytkowania, a unikalna stylistyka
+                    butelki doda
+                    charakteru
+                    Twoim napojom!
+                </p>
+                <div class="es-revolution__container">
+                    <div class="es-revolution__left">
+                        <img class="es-revolution__packshot"
+                             src="./img/revolution-packshot.png"
+                             alt="sodastream packshot">
+                    </div>
+                    <div class="es-revolution__right">
+                        <p class="es-revolution__right-description">
+                            <span class="es-revolution__right-description--bold">
+                                Designerska butelka Fuse to Twój sposób na…
+                            </span>
+                            <br>
+                            <br>
+                            <span class="es-revolution__right-description--bold">
+                                Eko nawyki:
+                            </span>
+                            Zamień jednorazowe butelki na wielorazowe rozwiązanie z odpornego Tritanu, wolnego od BPA.
+                            <br>
+                            <br>
+                            <span class="es-revolution__right-description--bold">
+                                Komfort na co dzień:
+                            </span>
+                            Wygodnie umyj swoją butelkę
+                            w&nbsp;zmywarce bez obaw o uszkodzenia czy zarysowania.
+                            <br>
+                            <br>
+                            <span class="es-revolution__right-description--bold">Świeżość bąbelków:</span>
+                            Ciesz się ulubioną intensywnością nagazowania dzięki hermetycznemu zamknięciu.
+                            <br>
+                            <br>
+                            <span class="es-revolution__right-description--bold">
+                                Łatwość użytkowania:
+                            </span>
+                            Butelka jest kompatybilna
+                            z&nbsp;saturatorami SodaStream Terra, Art, Duo, Ensõ,
+                            Spirit&nbsp;i&nbsp;Source.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="es-possibilities">
+                <div class="es-possibilities__title-container">
+                    <div class="es-possibilities__title-group">
+                        <h3 class="es-possibilities__title es-possibilities__title--first">
+                            Perfekcyjne koktajle i&nbsp;moktajle na&nbsp;1,&nbsp;2,&nbsp;tssst!
+                        </h3>
+                    </div>
+                </div>
+                <img class="es-possibilities__img"
+                     src="./img/possibilities.png"
+                     loading="lazy"
+                     alt="Sodastream Orzeźwiające w dzień i wyrafinowane nocą">
+                <div class="es-possibilities__content">
+                    <p class="es-possibilities__description es-possibilities__description--centered">
+                        Lubisz nietuzinkowe smaki? Z zestawem SodaStream Crafted Grejpfrut & Kwiat Czarnego Bzu
+                        błyskawicznie
+                        wykreujesz
+                        wyjątkowy napój, który doda charakteru Twojej codzienności. Unikalna kompozycja wyrazistego
+                        grejpfruta i
+                        subtelnych
+                        kwiatów czarnego bzu stanie się perfekcyjnym
+                        tłem dla każdej chwili - zarówno relaksu spędzonego w błogiej samotności, jak i uroczystej
+                        kolacji
+                        z bliskimi.
+                        <br>
+                        <br>
+                    </p>
+                    <p class="es-possibilities__description">
+                        <span class="es-possibilities__description-bold es-possibilities__description-bold--first">
+                            Z pysznym napojem każdy moment smakuje jeszcze lepiej…
+                        </span>
+                        <span class="es-possibilities__description-bold">Przerwa w pracy:</span>
+                        Lemoniada 2.0. orzeźwi i doda Ci energii do dalszych wyzwań.
+                        <br>
+                        <span class="es-possibilities__description-bold">
+                            Romantyczna randka:
+                        </span>
+                        Finezyjny napój podkreśli piękno relacji i zachęci do głębokich rozmów.
+                        <br>
+                        <span class="es-possibilities__description-bold">
+                            Czas z bliskimi:
+                        </span>
+                        Kreatywny koktajl zaskoczy gości np. w trakcie imprezy czy rodzinnego spotkania.
+                        <br>
+                        <span class="es-possibilities__description-bold">
+                            Relaks w samotności:
+                        </span>
+                        Domowy moktajl pomoże odpocząć w spokoju np. z książką
+                        <br> lub maseczką na twarzy.
+                    </p>
+
+                    <p class="es-possibilities__description-title">SodaStream Crafted doda każdej chwili odrobinę
+                        fantazji!</p>
+
+                    <div class="es-possibilities__right">
+                        <p class="es-possibilities__title es-possibilities__title--small">
+                            Bąbelkuj niczym najlepszy
+                            barman świata
+                        </p>
+                        <p class="es-possibilities__text">
+                            Kreuj bąbelkowe napoje, które podbiją
+                            serca i&nbsp;podniebienia nawet najbardziej
+                            wymagających&nbsp;miłośników smaku!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="es-day-night"></div>
+
+            <div class="es-triple">
+                <div class="es-triple__wrapper">
+                    <div class="es-triple__mobile-container">
+                        <img class=" es-triple__img"
+                             src="./img/triple-mobile.png"
+                             alt="Gazuj, Miksuj i Smakuj">
+                        <p class="es-triple__desc es-triple__desc-mobile--first">
+                            gazuj
+                            <span class="es-triple__desc--small es-triple__desc--small-first">
+                                Dodaj do wody bąbelki przy pomocy ekspresu do gazowania.
+                            </span>
+                        </p>
+                        <p class="es-triple__desc es-triple__desc-mobile--second">
+                            miksuj
+                            <span class="es-triple__desc--small es-triple__desc--small-second">
+                                Uzupełnij wodę gazowaną syropem Grejpfrut & Kwiat Czarnego Bzu
+                                i&nbsp;ulubionymi dodatkami.
+                            </span>
+                        </p>
+                        <p class="es-triple__desc es-triple__desc-mobile--third">
+                            smakuj
+                            <span class="es-triple__desc--small es-triple__desc--small-third">
+                                Zakochaj się w niebanalnym <br>połączeniu smaków i ciesz się <br>pysznym orzeźwieniem.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="es-recipes">
+                <div class="es-recipes__day-night es-recipes__day-night--first">
+                    <div class="es-recipes__day-night-group">
+                        <h3 class="es-recipes__day-night-title">
+                            Smakowa<br> kreatywność<br> na co dzień
+
+                        </h3>
+                    </div>
+                    <p class="es-recipes__day-night-label es-recipes__day-night-label--first">
+                        Day
+                    </p>
+                    <img class="es-recipes__img"
+                         src="./img/day.png"
+                         alt="Moktajl Day">
+                    <div class="es-recipes__day-night-recipe-content es-recipes__day-night-recipe-content--first">
+                        <p
+                           class="es-recipes__day-night-recipe-content-title es-recipes__day-night-recipe-content-title--small">
+                            Wyjątkowe moktajle
+                            w&nbsp;ciągu&nbsp;dnia:
+                        </p>
+
+                        <p class="es-recipes__day-night-text">
+                            <b class="es-recipes__day-night-text--bold">
+                                Zakochaj się w kwiatowo-owocowym moktajlu z orzeźwiającymi,
+                                cytrusowymi&nbsp;nutami.
+                            </b>
+                            <br>
+                        </p>
+                    </div>
+                </div>
+                <div class="es-recipes__day-night es-recipes__day-night--second">
+                    <p class="es-recipes__day-night-label es-recipes__day-night-label--second">
+                        Night
+                    </p>
+                    <img class="es-recipes__img es-recipes__img--night es-recipes__img--night-mobile"
+                         src="./img/night-m.png"
+                         alt="Koktajl Night">
+                    <img class="es-recipes__img es-recipes__img--night es-recipes__img--night-desktop"
+                         src="./img/night.png"
+                         alt="Koktajl Night">
+                    <div class="es-recipes__day-night-recipe-content es-recipes__day-night-recipe-content--dark">
+                        <p
+                           class="es-recipes__day-night-recipe-content-title es-recipes__day-night-recipe-content-title--small">
+                            Fantazyjne koktajle<br>
+                            wieczorem:
+                        </p>
+                        <p class="es-recipes__day-night-text">
+                            <b class="es-recipes__day-night-text--bold">
+                                Przygotuj niebanalne drinki
+                                inspirowane&nbsp;grejpfrutem, uzupełniając napój o lód, ulubione dodatki
+                                i&nbsp;opcjonalnie&nbsp;alkohol.
+                            </b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="es-video">
+                <h3 class="es-video__title es-title">
+                    Ożywiaj codzienność pomysłowo&nbsp;i&nbsp;z&nbsp;klasą
+                </h3>
+                <p class="es-video__subtitle">Jedna SodaStream – wiele&nbsp;możliwości</p>
+                <p class="es-video__text">
+                    Masz ochotę na jeszcze więcej smaku, fantazji i radości z życia? Poznaj całą gamę syropów smakowych
+                    SodaStream!
+                    Przygotujesz z nimi wyjątkowe napoje – dopasowane do Twojego charakteru i nastroju.
+                    <br>
+                    <br>
+                    Eksperymentuj we własnej kuchni z takimi smakami jak Pepsi, 7 UP czy Mirinda. Zakochaj się
+                    w owocowych propozycjach - klasycznej Lemoniadzie, egzotycznej Marakui i wyjątkowych Owocach
+                    Leśnych. Odkrywaj
+                    różnorodne smaki!
+                </p>
+            </div>
+
+            <div class="es-photo">
+                <img class="es-photo__img es-photo__img--syrups"
+                     src="./img/products.png"
+                     loading="lazy"
+                     alt="Lista syropów Sodastream">
+                <p class="es-photo__text es-title">
+                    Eksploruj, komponuj<br>
+                    i delektuj się bąbelkami bez ograniczeń!
+                </p>
+            </div>
         </div>
-
-        <div class="es-kv__title-group">
-          <div class="es-kv__logo">
-            <img class="es-kv__img"
-                 src="./img/logo.png"
-                 alt="logotyp Sodastream">
-          </div>
-          <h3 class="es-kv__title">
-            <span class="es-kv__title--left">
-              Zestaw do&nbsp;koktajli
-              <br>
-              i moktajli
-            </span>
-          </h3>
-        </div>
-        <img class="es-kv__glass"
-             src="./img/glass.png"
-             loading="lazy"
-             alt="glass">
-      </div>
-
-      <div class="es-set">
-        <p class="es-kv__text">
-          Daj się ponieść magii smaku z limitowanym zestawem SodaStream Crafted Grejpfrut
-          &&nbsp;Kwiat&nbsp;Czarnego Bzu. Znajdziesz w nim nie tylko syrop smakowy, lecz również limitowaną
-          butelkę inspirowaną niebanalną kompozycją grejpfruta i czarnego bzu.
-        </p>
-        <h3 class="es-set__title">
-          Poznaj nową, wyrafinowaną kompozycję smakową SodaStream
-          Crafted Grejpfrut & Kwiat Czarnego Bzu.
-        </h3>
-        <p class="es-set__subtitle">
-          Pomarańczowo-żółta kolorystyka i owocowo-kwiatowa grafika idealnie korespondują
-          ze smakiem syropu. To zestaw dla wszystkich, którzy cenią designerskie dodatki
-          i&nbsp;chcą dodać codzienności jeszcze więcej koloru.
-        </p>
-        <h3 class="es-set__title es-set__title--gazpacho es-title">
-          Co znajdziesz w&nbsp;zestawie?
-        </h3>
-        <div class="es-set__group">
-          <div class="es-set__group-item es-set__group-item--left">
-            <p class="es-set__group-item-title es-set__group-item-title--right">
-              Syrop SodaStream<br> Crafted Grejpfrut & <br>Kwiat Czarnego<br> Bzu 330 ml:
-            </p>
-
-            <p class="es-set__group-item-description es-set__group-item-description--right">
-              Autorska baza<br>
-              do koktajli i moktajli,<br>
-              z którą przygotujesz wyjątkowe napoje.
-            </p>
-          </div>
-          <div class="es-set__group-packshots">
-            <img class="es-set__group-img es-set__group-img--mobile"
-                 src="./img/set-packshot-m.png"
-                 alt="">
-
-            <img class="es-set__group-img es-set__group-img--desktop"
-                 src="./img/set-packshot.png"
-                 alt="">
-          </div>
-          <div class="es-set__group-item es-set__group-item--right">
-            <p class="es-set__group-item-title">
-              Butelka SodaStream <br>Fuse 1 l:
-            </p><br>
-            <p class="es-set__group-item-description es-set__group-item-description--2">
-              Zaprojektowana <br>
-              jako dopełnienie<br>
-              syropu, design<br>
-              nawiązuje stylistycznie<br>
-              do czarującego duetu grejpfruta i&nbsp;czarnego bzu.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="es-info">
-        <h3 class="es-info__title es-title">Gdy design i smak wirują<br>
-          w hipnotyzującym rytmie
-        </h3>
-        <div class="es-info__container">
-          <div class="es-info__left">
-            <img class="es-photo__img"
-                 src="./img/photo.png"
-                 alt="Kubek z Sodastream">
-          </div>
-          <div class="es-info__right">
-            <p class="es-info__text">
-              <b>Oryginalny smak, w którym się zakochasz</b>
-
-              <br>
-              <br>
-              Masz ochotę na niebanalną harmonię smaków,
-              których&nbsp;połączenie&nbsp;zaskoczy Ciebie i Twoich bliskich? Skosztuj&nbsp;wyjątkowego
-              syropu SodaStream Crafted
-              Grejpfrut&nbsp;&&nbsp;Kwiat&nbsp;Czarnego Bzu! Ta wyrafinowana kompozycja&nbsp;smaków&nbsp;soczystego
-              grejpfruta
-              i&nbsp;romantycznych&nbsp;kwiatów&nbsp;czarnego bzu oczaruje
-              Twoich&nbsp;gości&nbsp;i&nbsp;zaprosi Was do celebracji mikromomentów.
-
-              <br>
-              <br>
-              <br>
-              <b>Stylowa butelka, z którą podkręcisz doznania
-              </b>
-              <br>
-              <br>
-              Chcesz, by Twoje codzienne rytuały zyskały wyjątkową oprawę?&nbsp;Stylowa butelka Fuse o pojemności 1 l
-              to&nbsp;dodatek,&nbsp;który&nbsp;podkreśli smak Twoich ulubionych napojów.&nbsp;Jej&nbsp;unikalny design
-              nawiązuje
-              do
-              kompozycji
-              syropu,&nbsp;dopełniając jego walory smakowe kolorową grafiką.&nbsp;To&nbsp;praktyczny gadżet, który
-              wprowadzi
-              do&nbsp;Twojej&nbsp;kuchni&nbsp;odrobinę świeżości!
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="es-revolution">
-        <h3 class="es-revolution__title es-title">Styl, komfort<br>
-          i funkcjonalność w&nbsp;jednym
-        </h3>
-        <p class="es-revolution__subtitle">
-          W zestawie SodaStream Crafted Grejpfrut & Kwiat Czarnego Bzu z limitowanej edycji Crafted znajdziesz butelkę,
-          która
-          łączy nowoczesny design i funkcjonalność. Jest wielorazowa, trwała
-          i&nbsp;praktyczna – by zapewnić Ci komfort podczas codziennego użytkowania, a unikalna stylistyka butelki doda
-          charakteru
-          Twoim napojom!
-        </p>
-        <div class="es-revolution__container">
-          <div class="es-revolution__left">
-            <img class="es-revolution__packshot"
-                 src="./img/revolution-packshot.png"
-                 alt="sodastream packshot">
-          </div>
-          <div class="es-revolution__right">
-            <p class="es-revolution__right-description">
-              <span class="es-revolution__right-description--bold">
-                Designerska butelka Fuse to Twój sposób na…
-              </span>
-              <br>
-              <br>
-              <span class="es-revolution__right-description--bold">
-                Eko nawyki:
-              </span>
-              Zamień jednorazowe butelki na wielorazowe rozwiązanie z odpornego Tritanu, wolnego od BPA.
-              <br>
-              <br>
-              <span class="es-revolution__right-description--bold">
-                Komfort na co dzień:
-              </span>
-              Wygodnie umyj swoją butelkę
-              w&nbsp;zmywarce bez obaw o uszkodzenia czy zarysowania.
-              <br>
-              <br>
-              <span class="es-revolution__right-description--bold">Świeżość bąbelków:</span>
-              Ciesz się ulubioną intensywnością nagazowania dzięki hermetycznemu zamknięciu.
-              <br>
-              <br>
-              <span class="es-revolution__right-description--bold">
-                Łatwość użytkowania:
-              </span>
-              Butelka jest kompatybilna
-              z&nbsp;saturatorami SodaStream Terra, Art, Duo, Ensõ,
-              Spirit&nbsp;i&nbsp;Source.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="es-possibilities">
-        <div class="es-possibilities__title-container">
-          <div class="es-possibilities__title-group">
-            <h3 class="es-possibilities__title es-possibilities__title--first">
-              Perfekcyjne koktajle i&nbsp;moktajle na&nbsp;1,&nbsp;2,&nbsp;tssst!
-            </h3>
-          </div>
-        </div>
-        <img class="es-possibilities__img"
-             src="./img/possibilities.png"
-             loading="lazy"
-             alt="Sodastream Orzeźwiające w dzień i wyrafinowane nocą">
-        <div class="es-possibilities__content">
-          <p class="es-possibilities__description es-possibilities__description--centered">
-            Lubisz nietuzinkowe smaki? Z zestawem SodaStream Crafted Grejpfrut & Kwiat Czarnego Bzu błyskawicznie
-            wykreujesz
-            wyjątkowy napój, który doda charakteru Twojej codzienności. Unikalna kompozycja wyrazistego grejpfruta i
-            subtelnych
-            kwiatów czarnego bzu stanie się perfekcyjnym
-            tłem dla każdej chwili - zarówno relaksu spędzonego w błogiej samotności, jak i uroczystej kolacji
-            z bliskimi.
-            <br>
-            <br>
-          </p>
-          <p class="es-possibilities__description">
-            <span class="es-possibilities__description-bold es-possibilities__description-bold--first">
-              Z pysznym napojem każdy moment smakuje jeszcze lepiej…
-            </span>
-            <span class="es-possibilities__description-bold">Przerwa w pracy:</span>
-            Lemoniada 2.0. orzeźwi i doda Ci energii do dalszych wyzwań.
-            <br>
-            <span class="es-possibilities__description-bold">
-              Romantyczna randka:
-            </span>
-            Finezyjny napój podkreśli piękno relacji i zachęci do głębokich rozmów.
-            <br>
-            <span class="es-possibilities__description-bold">
-              Czas z bliskimi:
-            </span>
-            Kreatywny koktajl zaskoczy gości np. w trakcie imprezy czy rodzinnego spotkania.
-            <br>
-            <span class="es-possibilities__description-bold">
-              Relaks w samotności:
-            </span>
-            Domowy moktajl pomoże odpocząć w spokoju np. z książką
-            <br> lub maseczką na twarzy.
-          </p>
-
-          <p class="es-possibilities__description-title">SodaStream Crafted doda każdej chwili odrobinę fantazji!</p>
-
-          <div class="es-possibilities__right">
-            <p class="es-possibilities__title es-possibilities__title--small">
-              Bąbelkuj niczym najlepszy
-              barman świata
-            </p>
-            <p class="es-possibilities__text">
-              Kreuj bąbelkowe napoje, które podbiją
-              serca i&nbsp;podniebienia nawet najbardziej
-              wymagających&nbsp;miłośników smaku!
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="es-day-night"></div>
-
-      <div class="es-triple">
-        <div class="es-triple__wrapper">
-          <div class="es-triple__mobile-container">
-            <img class=" es-triple__img"
-                 src="./img/triple-mobile.png"
-                 alt="Gazuj, Miksuj i Smakuj">
-            <p class="es-triple__desc es-triple__desc-mobile--first">
-              gazuj
-              <span class="es-triple__desc--small">
-                Dodaj do wody bąbelki przy pomocy ekspresu do gazowania.
-              </span>
-            </p>
-            <p class="es-triple__desc es-triple__desc-mobile--second">
-              miksuj
-              <span class="es-triple__desc--small">
-                Uzupełnij wodę gazowaną syropem Grejpfrut & Kwiat Czarnego Bzu
-                i&nbsp;ulubionymi dodatkami.
-              </span>
-            </p>
-            <p class="es-triple__desc es-triple__desc-mobile--third">
-              smakuj
-              <span class="es-triple__desc--small es-triple__desc--small-third">
-                Zakochaj się w niebanalnym połączeniu smaków i ciesz się pysznym orzeźwieniem.
-              </span>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="es-recipes">
-        <div class="es-recipes__day-night es-recipes__day-night--first">
-          <div class="es-recipes__day-night-group">
-            <h3 class="es-recipes__day-night-title">
-              Smakowa<br> kreatywność<br> na co dzień
-
-            </h3>
-          </div>
-          <p class="es-recipes__day-night-label es-recipes__day-night-label--first">
-            Day
-          </p>
-          <img class="es-recipes__img"
-               src="./img/day.png"
-               alt="Moktajl Day">
-          <div class="es-recipes__day-night-recipe-content es-recipes__day-night-recipe-content--first">
-            <p class="es-recipes__day-night-recipe-content-title es-recipes__day-night-recipe-content-title--small">
-              Wyjątkowe moktajle
-              w&nbsp;ciągu&nbsp;dnia:
-            </p>
-
-            <p class="es-recipes__day-night-text">
-              <b class="es-recipes__day-night-text--bold">
-                Zakochaj się w kwiatowo-owocowym moktajlu z orzeźwiającymi,
-                cytrusowymi&nbsp;nutami.
-              </b>
-              <br>
-            </p>
-          </div>
-        </div>
-        <div class="es-recipes__day-night es-recipes__day-night--second">
-          <p class="es-recipes__day-night-label es-recipes__day-night-label--second">
-            Night
-          </p>
-          <img class="es-recipes__img es-recipes__img--night es-recipes__img--night-mobile"
-               src="./img/night-m.png"
-               alt="Koktajl Night">
-          <img class="es-recipes__img es-recipes__img--night es-recipes__img--night-desktop"
-               src="./img/night.png"
-               alt="Koktajl Night">
-          <div class="es-recipes__day-night-recipe-content es-recipes__day-night-recipe-content--dark">
-            <p class="es-recipes__day-night-recipe-content-title es-recipes__day-night-recipe-content-title--small">
-              Fantazyjne koktajle<br>
-              wieczorem:
-            </p>
-            <p class="es-recipes__day-night-text">
-              <b class="es-recipes__day-night-text--bold">
-                Przygotuj niebanalne drinki
-                inspirowane&nbsp;grejpfrutem, uzupełniając napój o lód, ulubione dodatki
-                i&nbsp;opcjonalnie&nbsp;alkohol.
-              </b>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="es-video">
-        <h3 class="es-video__title es-title">
-          Ożywiaj codzienność pomysłowo&nbsp;i&nbsp;z&nbsp;klasą
-        </h3>
-        <p class="es-video__subtitle">Jedna SodaStream – wiele&nbsp;możliwości</p>
-        <p class="es-video__text">
-          Masz ochotę na jeszcze więcej smaku, fantazji i radości z życia? Poznaj całą gamę syropów smakowych
-          SodaStream!
-          Przygotujesz z nimi wyjątkowe napoje – dopasowane do Twojego charakteru i nastroju.
-          <br>
-          <br>
-          Eksperymentuj we własnej kuchni z takimi smakami jak Pepsi, 7 UP czy Mirinda. Zakochaj się
-          w owocowych propozycjach - klasycznej Lemoniadzie, egzotycznej Marakui i wyjątkowych Owocach Leśnych. Odkrywaj
-          różnorodne smaki!
-        </p>
-      </div>
-
-      <div class="es-photo">
-        <img class="es-photo__img es-photo__img--syrups"
-             src="./img/products.png"
-             loading="lazy"
-             alt="Lista syropów Sodastream">
-        <p class="es-photo__text es-title">
-          Eksploruj, komponuj<br>
-          i delektuj się bąbelkami bez ograniczeń!
-        </p>
-      </div>
-    </div>
-  </body>
+    </body>
 
 </html>
